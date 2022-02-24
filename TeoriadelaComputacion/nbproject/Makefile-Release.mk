@@ -35,7 +35,11 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/001Prueba.o \
+	${OBJECTDIR}/002Practica1.o \
+	${OBJECTDIR}/003P1UnionInters.o \
+	${OBJECTDIR}/004P1Concatenacion.o \
+	${OBJECTDIR}/005P1Potencia.o
 
 
 # C Compiler Flags
@@ -62,10 +66,30 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/teoriadelacomputacion.exe: ${OBJECTFI
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/teoriadelacomputacion ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/main.o: main.cpp
+${OBJECTDIR}/001Prueba.o: 001Prueba.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/001Prueba.o 001Prueba.cpp
+
+${OBJECTDIR}/002Practica1.o: 002Practica1.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/002Practica1.o 002Practica1.cpp
+
+${OBJECTDIR}/003P1UnionInters.o: 003P1UnionInters.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/003P1UnionInters.o 003P1UnionInters.cpp
+
+${OBJECTDIR}/004P1Concatenacion.o: 004P1Concatenacion.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/004P1Concatenacion.o 004P1Concatenacion.cpp
+
+${OBJECTDIR}/005P1Potencia.o: 005P1Potencia.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/005P1Potencia.o 005P1Potencia.cpp
 
 # Subprojects
 .build-subprojects:
